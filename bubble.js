@@ -5,30 +5,31 @@ function bubble(){
     setTimeout(function(){
       let mx = 0;
       let pos;
-      let k2 = 0;
+      //let k2 = 0;
+      k+=(101-speed)*1;
       for(let j=0;j<=i;j++){
 
         setTimeout(function(){
           strips[j].style.backgroundColor = "red";
-        },k2);
+        },k);
 
         setTimeout(function(){
           strips[j].style.backgroundColor = "#04009A";
 
-          if(stripHeights[j] > mx){
+          if(stripHeights[j] >= mx){
             mx = stripHeights[j];
             pos = j;
           }
-        },k2 + (21-speed)*10 );
-        k2+=(21-speed)*10;
+        },k + (101-speed)*1 );
+        k+=(101-speed)*1*2;
       }
 
       setTimeout(function(){
         swap(i,pos);
-      },k2)
-
+      },k)
+      k+=(101-speed)*1;
     },k);
-    k+=(21-speed)*10*i + (21-speed)*10;
+    k+=(101-speed)*1;
   }
 }
 
