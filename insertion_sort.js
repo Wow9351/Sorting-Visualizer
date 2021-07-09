@@ -9,23 +9,24 @@ document.querySelector(".insertion").addEventListener("click",function(){
 function insertionSort(){
   let k=0;
   for(let i=1;i<sz;i++){
-    let k2=0;
+    //let k2=0;
+    k+=(101-speed)*1;
     setTimeout(function(){
       //strips[i].style.backgroundColor = "Yellow";
       for(let j=i-1;j>=0;j--){
         setTimeout(function(){
           strips[j].style.backgroundColor = "red";
-        },k2);
+        },k);
 
         setTimeout(function(){
           strips[j].style.backgroundColor = "#04009A";
           if(stripHeights[j] > stripHeights[j+1] )
             swap(j,j+1);
-        },k2+ (21-speed)*10 );
-        k2+=(21-speed)*10;
+        },k+ (101-speed)*1 );
+        k+=(101-speed)*1*2;
       }
     },k);
-    k+=(21-speed)*10*i;
+    k+=(101-speed)*1;
   }
 
 }
